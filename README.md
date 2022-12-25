@@ -14,3 +14,4 @@ The main Twitter API interface, uses tweepy to pull basic tweet infromation give
 
 ## Extra Resources
 Project and work is based off of: https://github.com/jfmalloy1/AcademicTwitter
+PySimpleGUI: https://www.pysimplegui.org/en/latest/readme/Cancel changes
