@@ -7,7 +7,7 @@ Perfrom sentiment analysis on the data pulled.
 
 ## Script Descriptions
 
-'''
+```
 martin_testscrape.py
-'''
+```
 The main Twitter API interface, uses tweepy to pull basic tweet infromation given a queury.
