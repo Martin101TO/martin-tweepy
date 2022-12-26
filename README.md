@@ -8,9 +8,13 @@ Perfrom sentiment analysis on the data pulled.
 ## Script Descriptions
 
 ```
-martin_testscrape.py
+scrape.py
 ```
 The main Twitter API interface, uses tweepy to pull basic tweet infromation given a queury.
+```
+scrape_app.py
+```
+The main GUI, uses PySimpleGui to create a basic interface that allows the user to use scrape.py.
 
 ## Extra Resources
 Project and work is based off of: https://github.com/jfmalloy1/AcademicTwitter
