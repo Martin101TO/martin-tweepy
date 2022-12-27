@@ -4,8 +4,9 @@ This repository uses the Twitter API and tweepy to scrape tweets and store relat
 ## Eventual Goal
 Turn scripts into an executable application to make the process simpler for researchers.  
 Must be able to search within a given date range and given query.  
-Data stored should have geo tag data any hastags, and basic statistics on tweets. 
-Perfrom sentiment analysis on the data pulled.  
+Data stored should have geo tag data any hastags, and basic statistics on tweets.  
+  
+Final goal is to perform sentiment analysis on the tweets pulled and be able to compare that data to other statistics pulled such as geotage data.  
 
 ## Script Descriptions
 ```
