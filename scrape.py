@@ -47,7 +47,7 @@ def tweets_csv(tweets_response):
 
 # Main function for testing functionality of the program
 def main():
-    tweet_data = tweet_scrape('BEARER TOKEN','water lang:en')
+    tweet_data = tweet_scrape('BEARER TOKEN','Query')
     tweets_csv(tweet_data)
 
 main()
