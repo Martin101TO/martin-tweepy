@@ -3,6 +3,11 @@
 import tweepy
 import csv
 import os
+from dotenv import load_dotenv
+
+# Setting up environmental variables
+load_dotenv()
+BEARER_TOKEN = os.getenv('BEARER_TOKEN')
 
 # Authentication with bearer token and setup for user query
 def auth(user_token):
@@ -10,6 +15,10 @@ def auth(user_token):
 
 def insert_query(user_query):
     return user_query
+
+# Builds the user query given the queried word, start time, and end time
+def build_query(i_query, stime, etime):
+    return i_query + 'start_time: ' + stime + ' end_time:' + etime
 
 # Main function that pulls the tweets
 def tweet_scrape(i_token, i_query):
@@ -25,9 +34,9 @@ def tweet_scrape(i_token, i_query):
     return tweets
 
 # Writes the tweets data to the csv file
-def tweets_csv(tweets_response):
+def tweets_csv(tweets_response, save_file):
     #Creating a csv file
-    csvFile = open("data.csv", "a", newline="", encoding='utf-8')
+    csvFile = open(save_file, "a", newline="", encoding='utf-8')
     csvWriter = csv.writer(csvFile)
 
     csvWriter.writerow(['tweet_id','retweets', 'replys', 'likes','text'])
@@ -48,7 +57,7 @@ def tweets_csv(tweets_response):
 
 # Main function for testing functionality of the program
 def main():
-    tweet_data = tweet_scrape(os.getenv('TWEEPY_KEY'),'water lang:en')
-    tweets_csv(tweet_data)
+    tweet_data = tweet_scrape(BEARER_TOKEN, 'water')
+    tweets_csv(tweet_data, 'data.csv')
 
 main()
