@@ -10,7 +10,7 @@ Perfrom sentiment analysis on the data pulled.
 ```
 scrape.py
 ```
-The main Twitter API interface, uses tweepy to pull basic tweet infromation given a queury.
+The main Twitter API interface, uses tweepy to pull basic tweet infromation given a query.
 ```
 scrape_app.py
 ```
