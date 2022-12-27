@@ -2,6 +2,7 @@
 # Description: This program uses tweepy to scrape tweets and store in a csv file.
 import tweepy
 import csv
+import os
 
 # Authentication with bearer token and setup for user query
 def auth(user_token):
@@ -47,7 +48,7 @@ def tweets_csv(tweets_response):
 
 # Main function for testing functionality of the program
 def main():
-    tweet_data = tweet_scrape('AAAAAAAAAAAAAAAAAAAAANzFfwEAAAAAtAGs5PIROuW8Y9Op%2BO6RQrfB1xg%3DDj7bAjMYszip7hlSvEgrPcCHsjxwyfbola2NLtmRNb09amMMf5','water lang:en')
+    tweet_data = tweet_scrape(os.getenv('TWEEPY_KEY'),'water lang:en')
     tweets_csv(tweet_data)
 
 main()
