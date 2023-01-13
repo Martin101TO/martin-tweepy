@@ -20,4 +20,6 @@ The main GUI, uses PySimpleGui to create a basic interface that allows the user 
 
 ## Extra Resources
 Project and work this is based off of: https://github.com/jfmalloy1/AcademicTwitter  
-PySimpleGUI: https://www.pysimplegui.org/en/latest/readme/
+PySimpleGUI: https://www.pysimplegui.org/en/latest/readme/  
+Tweepy documentation: https://docs.tweepy.org/en/stable/  
+Twitter query guide: https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query  
