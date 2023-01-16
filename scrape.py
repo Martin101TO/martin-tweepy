@@ -39,7 +39,7 @@ def tweets_csv(tweets_response, save_file):
     csvFile = open(save_file, "a", newline="", encoding='utf-8')
     csvWriter = csv.writer(csvFile)
 
-    csvWriter.writerow(['tweet_id','retweets', 'replys', 'likes','text'])
+    csvWriter.writerow(['tweet_id','retweets', 'replys', 'likes','text', 'sentiment'])
 
     for tweet in tweets_response.data:
         tweet_id = tweet.id
