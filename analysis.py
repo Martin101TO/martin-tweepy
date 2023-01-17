@@ -4,7 +4,7 @@ from textblob import TextBlob
 import csv
 import re
 
-
+# Helper function to filter out emojis, taken from https://stackoverflow.com/a/58356570
 def remove_emojis(data):
     emoj = re.compile("["
         u"\U0001F600-\U0001F64F"  # emoticons
@@ -28,18 +28,30 @@ def remove_emojis(data):
                       "]+", re.UNICODE)
     return re.sub(emoj, '', data)
 
-def open_file(save_file):
-    csvFile = open(save_file)
+# Main function that performs the sentiment analysis, using sentiment from TextBlob, save_file is input file to be processed, writes result to out.csv
+def analyze_file(save_file):
+    # Opening files
+    csvFile = open(save_file, 'r', encoding="utf8")
+    csvOut = open("out.csv", 'w', encoding="utf8")
     csv_reader = csv.reader(csvFile)
+    csv_writer = csv.writer(csvOut)
+    
     line_count = 0
 
+    # Processing each row of data in save_file
     for row in csv_reader: 
-        print(remove_emojis(row))
+        statement = TextBlob(remove_emojis(row[4]))
+        
+        row.append(statement.sentiment.polarity)
+
+        csv_writer.writerow(row)
         line_count += 1
 
     csvFile.close
+    csvOut.close
 
+# Main function, holds testcase
 def main():
-    open_file("data.csv")
+    analyze_file("data.csv")
 
 main()

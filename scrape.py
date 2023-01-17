@@ -49,7 +49,7 @@ def tweets_csv(tweets_response, save_file):
         replys = tweet.public_metrics
         likes = tweet.public_metrics
 
-        res = [tweet_id, retweets, replys, likes, text]
+        res = [tweet_id, retweets, replys, likes, text, '']
 
         csvWriter.writerow(res)
 
