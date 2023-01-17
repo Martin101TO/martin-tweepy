@@ -17,9 +17,13 @@ The main Twitter API interface, uses tweepy to pull basic tweet infromation give
 scrape_app.py
 ```
 The main GUI, uses PySimpleGui to create a basic interface that allows the user to use scrape.py.
-
+```
+analysis_app.py
+```
+The sentiment analysis functions, uses TextBlob to conduct basic sentiment analysis on text.
 ## Extra Resources
 Project and work this is based off of: https://github.com/jfmalloy1/AcademicTwitter  
 PySimpleGUI: https://www.pysimplegui.org/en/latest/readme/  
 Tweepy documentation: https://docs.tweepy.org/en/stable/  
 Twitter query guide: https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query  
+Sentiment Analysis Library: https://textblob.readthedocs.io/en/dev/quickstart.html  
