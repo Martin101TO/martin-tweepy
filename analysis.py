@@ -40,8 +40,8 @@ def analyze_file(save_file):
 
     # Processing each row of data in save_file
     for row in csv_reader: 
-        statement = TextBlob(remove_emojis(row[4]))
-        
+        statement = TextBlob(row[4])
+
         row.append(statement.sentiment.polarity)
 
         csv_writer.writerow(row)
@@ -49,6 +49,8 @@ def analyze_file(save_file):
 
     csvFile.close
     csvOut.close
+
+
 
 # Main function, holds testcase
 def main():

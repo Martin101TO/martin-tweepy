@@ -3,6 +3,7 @@
 import tweepy
 import csv
 import scrape
+import analysis
 import PySimpleGUI as sg
 
 
