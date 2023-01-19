@@ -59,5 +59,6 @@ def tweets_csv(tweets_response, save_file):
 def main():
     tweet_data = tweet_scrape(BEARER_TOKEN, 'water')
     tweets_csv(tweet_data, 'data.csv')
-
-main()
+    
+if __name__ == "__main__":
+    main()
